@@ -32,7 +32,7 @@ function make_table() {
         }
     }
     tblBody.append(`<tr><td colspan="3" align="center"><strong>${s<t?`${t}勝${s}負${u}引き分けで${p2}の勝利です！！`:`${s}勝${t}負${u}引き分けで${p1}の勝利です！！`}</strong><a href="https://twitter.com/share" class="twitter-share-button" data-text="【AtCoderじゃんけん】\n${p1} vs ${p2}\n${s}対${t}で${s==t?"引き分けです！！":(s<t?`${p2}の勝利です！！`:`${p1}の勝利です！！`)}\nhttps://hotman78.github.io/atcoder-janken/\n#Atcoderじゃんけん" data-related="hotmanww">Tweet</a></td></tr>`);
-    tblBody.append("<tr><td>コンテスト名</td><td>順位(プレイヤー1)</td><td>順位(プレイヤー2)</td></tr>")
+    tblBody.append(`<tr><td>コンテスト名</td><td>順位(${p1})</td><td>順位(${p2})</td></tr>`)
     for (const [key, value] of Object.entries(val1)) {
         if(key in val2){
             if(parseInt(value)==parseInt(val2[key])){
