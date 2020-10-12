@@ -7,6 +7,7 @@ function vs() {
         var p=$("input#player1").val();
         var script = document.createElement('script');
         script.src = url+p+'&callback=true';
+        console.log(url+p+'&callback=true');
         document.body.appendChild(script);
     }
     {
