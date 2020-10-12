@@ -16,17 +16,15 @@ function player2(e) {
     }
 }
 function make_table() {
-    var tbl = $("body").append("table");
-    console.log("aaa");
-    // var tblBody = tbl.append("tbody");
-    // for (const [key, value] of Object.entries(val1)) {
-    //     if(key in val2){
-    //         var row=tblBody.append("tr");
-    //         row.append("td").text(key);
-    //         row.append("td").text(value);
-    //         row.append("td").text(val2[key]);
-    //     }
-    // }
+    var tblBody = $("tbody");
+    for (const [key, value] of Object.entries(val1)) {
+        if(key in val2){
+            var row=tblBody.append("tr");
+            row.append("td").text(key);
+            row.append("td").text(value);
+            row.append("td").text(val2[key]);
+        }
+    }
 }
 function vs() {
     {
