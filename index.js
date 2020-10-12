@@ -22,7 +22,7 @@ function make_table() {
             if(value==val2[key]){
                 tblBody.append(`<tr><td>${key}</td><td bgcolor="#33FF99">${value}</td><td>${val2[key]}</td bgcolor="#33FF99"></tr>`);
             }else if(value>val2[key]){
-                tblBody.append(`<tr><td>${key}</td><td>${value}</td><td>${val2[key]}</td bgcolor="#33FF99"></tr>`);
+                tblBody.append(`<tr><td>${key}</td><td>${value}</td><td bgcolor="#33FF99">${val2[key]}</td></tr>`);
             }else{
                 tblBody.append(`<tr><td>${key}</td><td bgcolor="#33FF99">${value}</td><td>${val2[key]}</td></tr>`);
             }
