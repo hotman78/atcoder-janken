@@ -32,8 +32,7 @@ function vs() {
         var url="https://script.google.com/macros/s/AKfycbzcQl4L4-Z-3DXZyUY2q3UzQx2UaoNy8knJp7J9tlsl52xlLFEU/exec?id=";
         var p=$("input#player1").val();
         var script = document.createElement('script');
-        script.src = url+p+'&callback=true';
-        console.log(url+p+'&callback=player1');
+        script.src = url+p+'&callback=player1';
         document.body.appendChild(script);
     }
     {
