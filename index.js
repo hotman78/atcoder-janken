@@ -21,9 +21,9 @@ function make_table() {
     for (const [key, value] of Object.entries(val1)) {
         if(key in val2){
             var row=tblBody.append("tr");
-            row.append("td").text(key);
-            row.append("td").text(value);
-            row.append("td").text(val2[key]);
+            // row.append("td").text(key);
+            // row.append("td").text(value);
+            // row.append("td").text(val2[key]);
         }
     }
 }
