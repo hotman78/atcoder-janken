@@ -18,6 +18,19 @@ function player2(e) {
 function make_table() {
     var tblBody = $("tbody");
     tblBody.empty();
+    var s=0,t=0,u=0;
+    for (const [key, value] of Object.entries(val1)) {
+        if(key in val2){
+            if(parseInt(value)==parseInt(val2[key])){
+                u++;
+            }else if(parseInt(value)>parseInt(val2[key])){
+                s++;
+            }else{
+                t++;
+            }
+        }
+    }
+    tblBody.append(`<tr><td>プレイヤー1の${s}勝${t}負${u}引き分けです</tr></td>`);
     tblBody.append("<tr><td>コンテスト名</td><td>順位(プレイヤー1)</td><td>順位(プレイヤー2)</td></tr>")
     for (const [key, value] of Object.entries(val1)) {
         if(key in val2){
