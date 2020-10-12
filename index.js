@@ -19,9 +19,9 @@ function make_table() {
     var tblBody = $("tbody");
     for (const [key, value] of Object.entries(val1)) {
         if(key in val2){
-            if(value==val2[key]){
+            if(parseInt(value)==parseInt(val2[key])){
                 tblBody.append(`<tr><td>${key}</td><td bgcolor="#33FF99">${value}</td><td>${val2[key]}</td bgcolor="#33FF99"></tr>`);
-            }else if(value>val2[key]){
+            }else if(parseInt(value)>parseInt(val2[key])){
                 tblBody.append(`<tr><td>${key}</td><td>${value}</td><td bgcolor="#33FF99">${val2[key]}</td></tr>`);
             }else{
                 tblBody.append(`<tr><td>${key}</td><td bgcolor="#33FF99">${value}</td><td>${val2[key]}</td></tr>`);
