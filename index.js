@@ -9,6 +9,8 @@ function vs() {
     var b1=false,b2=false;
     request1.onload = function () {
         b1=true;
+        console.log("aaa");
+        console.log(this.response);
         $("body").append(this.response);
     }
     request2.onload = function () {
