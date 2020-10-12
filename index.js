@@ -30,7 +30,7 @@ function make_table() {
             }
         }
     }
-    tblBody.append(`<tr><td colspan="3"><strong>プレイヤー1の${s}勝${t}負${u}引き分けです</strong></tr></td>`);
+    tblBody.append(`<tr><td colspan="3" align="center"><strong>プレイヤー1の${s}勝${t}負${u}引き分けです</strong></tr></td>`);
     tblBody.append("<tr><td>コンテスト名</td><td>順位(プレイヤー1)</td><td>順位(プレイヤー2)</td></tr>")
     for (const [key, value] of Object.entries(val1)) {
         if(key in val2){
