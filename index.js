@@ -18,6 +18,7 @@ function player2(e) {
 function make_table() {
     var tblBody = $("tbody");
     tblBody.empty();
+    tblBody.append("<tr><td>コンテスト名</td><td>順位(プレイヤー1)</td><td>順位(プレイヤー2)</td></tr>")
     for (const [key, value] of Object.entries(val1)) {
         if(key in val2){
             if(parseInt(value)==parseInt(val2[key])){
