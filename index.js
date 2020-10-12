@@ -25,9 +25,9 @@ function make_table() {
             if(parseInt(value)==parseInt(val2[key])){
                 u++;
             }else if(parseInt(value)>parseInt(val2[key])){
-                s++;
-            }else{
                 t++;
+            }else{
+                s++;
             }
         }
     }
