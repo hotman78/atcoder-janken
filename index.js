@@ -31,7 +31,7 @@ function make_table() {
             }
         }
     }
-    tblBody.append(`<tr><td colspan="3" align="center"><strong>${p1}の${s}勝${t}負${u}引き分け</strong>です。<a href="https://twitter.com/share" class="twitter-share-button" data-url="【ページのURL】" data-text="${p1}の${s}勝${t}負${u}引き分けです" data-related="hotmanww" data-hashtags="#Atcoderじゃんけん">Tweet</a></tr></td>`);
+    tblBody.append(`<tr><td colspan="3" align="center"><strong>${p1}の${s}勝${t}負${u}引き分け</strong>です。<a href="https://twitter.com/share" class="twitter-share-button" data-url="https://hotman78.github.io/atcoder-janken/" data-text="${p1}の${s}勝${t}負${u}引き分けです。" data-related="hotmanww" data-hashtags="#Atcoderじゃんけん">Tweet</a></tr></td>`);
     tblBody.append("<tr><td>コンテスト名</td><td>順位(プレイヤー1)</td><td>順位(プレイヤー2)</td></tr>")
     for (const [key, value] of Object.entries(val1)) {
         if(key in val2){
