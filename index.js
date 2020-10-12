@@ -1,4 +1,5 @@
 var flag1=false,flag2=false,val1={},val2={};
+var p1="",p2="";
 function player1(e) {
     val1=e;
     if(flag2){
@@ -30,7 +31,7 @@ function make_table() {
             }
         }
     }
-    tblBody.append(`<tr><td colspan="3" align="center"><strong>プレイヤー1の${s}勝${t}負${u}引き分けです</strong></tr></td>`);
+    tblBody.append(`<tr><td colspan="3" align="center"><strong>${p1}の${s}勝${t}負${u}引き分け</strong>です</tr></td>`);
     tblBody.append("<tr><td>コンテスト名</td><td>順位(プレイヤー1)</td><td>順位(プレイヤー2)</td></tr>")
     for (const [key, value] of Object.entries(val1)) {
         if(key in val2){
@@ -48,16 +49,16 @@ function vs() {
     flag1=false;flag2=false;
     {
         var url="https://script.google.com/macros/s/AKfycbzcQl4L4-Z-3DXZyUY2q3UzQx2UaoNy8knJp7J9tlsl52xlLFEU/exec?id=";
-        var p=$("input#player1").val();
+        p1=$("input#player1").val();
         var script = document.createElement('script');
-        script.src = url+p+'&callback=player1';
+        script.src = url+p1+'&callback=player1';
         document.body.appendChild(script);
     }
     {
         var url="https://script.google.com/macros/s/AKfycbzcQl4L4-Z-3DXZyUY2q3UzQx2UaoNy8knJp7J9tlsl52xlLFEU/exec?id=";
-        var p=$("input#player2").val();
+        p2=$("input#player2").val();
         var script = document.createElement('script');
-        script.src = url+p+'&callback=player2';
+        script.src = url+p2+'&callback=player2';
         document.body.appendChild(script);
     }
 }
