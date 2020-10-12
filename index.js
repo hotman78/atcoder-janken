@@ -17,6 +17,7 @@ function player2(e) {
 }
 function make_table() {
     var tblBody = $("tbody");
+    tblBody.empty();
     for (const [key, value] of Object.entries(val1)) {
         if(key in val2){
             if(parseInt(value)==parseInt(val2[key])){
@@ -31,7 +32,6 @@ function make_table() {
 }
 function vs() {
     flag1=false;flag2=false;
-    tblBody.empty();
     {
         var url="https://script.google.com/macros/s/AKfycbzcQl4L4-Z-3DXZyUY2q3UzQx2UaoNy8knJp7J9tlsl52xlLFEU/exec?id=";
         var p=$("input#player1").val();
