@@ -19,10 +19,10 @@ function make_table() {
     var tblBody = $("tbody");
     for (const [key, value] of Object.entries(val1)) {
         if(key in val2){
-            var row=tblBody.appendChild("tr");
-            row.appendChild("td").text(key);
-            row.appendChild("td").text(value);
-            row.appendChild("td").text(val2[key]);
+            var row=tblBody.append("tr");
+            var c1=row.append("td");c1.text(key);
+            var c2=row.append("td");c2.text(value);
+            var c3=row.append("td");c3.text(val2[key]);
         }
     }
 }
