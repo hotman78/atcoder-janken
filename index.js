@@ -20,9 +20,9 @@ function make_table() {
     for (const [key, value] of Object.entries(val1)) {
         if(key in val2){
             var row=tblBody.append("tr");
-            var c1=row.append("td");c1.text(key);
-            var c2=row.append("td");c2.text(value);
-            var c3=row.append("td");c3.text(val2[key]);
+            // var c1=row.append("td");c1.text(key);
+            // var c2=row.append("td");c2.text(value);
+            // var c3=row.append("td");c3.text(val2[key]);
         }
     }
 }
