@@ -49,14 +49,14 @@ function make_table() {
 function vs() {
     flag1=false;flag2=false;
     {
-        var url="https://script.google.com/macros/s/AKfycbzcQl4L4-Z-3DXZyUY2q3UzQx2UaoNy8knJp7J9tlsl52xlLFEU/exec?id=";
+        var url="https://script.google.com/macros/s/AKfycbxBLPDUDtXurqixfarXgPr_IW4ZuIAiVyUP6cCSl-KOVSab2jVV/exec?id=";
         p1=$("input#player1").val();
         var script = document.createElement('script');
         script.src = url+p1+'&callback=player1';
         document.body.appendChild(script);
     }
     {
-        var url="https://script.google.com/macros/s/AKfycbzcQl4L4-Z-3DXZyUY2q3UzQx2UaoNy8knJp7J9tlsl52xlLFEU/exec?id=";
+        var url="https://script.google.com/macros/s/AKfycbxBLPDUDtXurqixfarXgPr_IW4ZuIAiVyUP6cCSl-KOVSab2jVV/exec?id=";
         p2=$("input#player2").val();
         var script = document.createElement('script');
         script.src = url+p2+'&callback=player2';
