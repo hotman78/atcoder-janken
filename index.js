@@ -31,7 +31,7 @@ function make_table() {
             }
         }
     }
-    tblBody.append(`<tr><td colspan="3" align="center"><strong>${p1}の${s}勝${t}負${u}引き分け</strong>です。<a href="https://twitter.com/share" class="twitter-share-button" data-text="【AtCoderじゃんけん】\n${p1} vs ${p2}\n${s}対${t}で${s==t?"引き分けです！！":(s<t?`${p2}の勝利です！！`:`${p1}の勝利です！！`)}\nhttps://hotman78.github.io/atcoder-janken/\n" data-related="hotmanww" data-hashtags="Atcoderじゃんけん">Tweet</a></td></tr><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>`);
+    tblBody.append(`<tr><td colspan="3" align="center"><strong>${p1}の${s}勝${t}負${u}引き分け</strong>です。<a href="https://twitter.com/share" class="twitter-share-button" data-text="【AtCoderじゃんけん】\n${p1} vs ${p2}\n${s}対${t}で${s==t?"引き分けです！！":(s<t?`${p2}の勝利です！！`:`${p1}の勝利です！！`)}\nhttps://hotman78.github.io/atcoder-janken/\n" data-related="hotmanww" data-hashtags="Atcoderじゃんけん(避難用)">Tweet</a></td></tr><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>`);
     tblBody.append("<tr><td>コンテスト名</td><td>順位(プレイヤー1)</td><td>順位(プレイヤー2)</td></tr>")
     for (const [key, value] of Object.entries(val1)) {
         if(key in val2){
