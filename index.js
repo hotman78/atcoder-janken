@@ -1,28 +1,28 @@
-var b1=false,b2=false,val1={},val2={};
+var flag1=false,flag2=false,val1={},val2={};
 function player1(e) {
     val1=e;
-    if(b2){
+    if(flag2){
         make_table();
     }else{
-        b1=true;
+        flag1=true;
     }
 }
 function player2(e) {
     val2=e;
-    if(b1){
+    if(flag1){
         make_table();
     }else{
-        b2=true;
+        flag2=true;
     }
 }
 function make_table() {
     var tblBody = $("tbody");
     for (const [key, value] of Object.entries(val1)) {
         if(key in val2){
-            var row=tblBody.append("tr");
-            row.append("td").text(key);
-            row.append("td").text(value);
-            row.append("td").text(val2[key]);
+            var row=tblBody.appendChild("tr");
+            row.appendChild("td").text(key);
+            row.appendChild("td").text(value);
+            row.appendChild("td").text(val2[key]);
         }
     }
 }
