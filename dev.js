@@ -28,6 +28,7 @@ function vs() {
         tblBody.empty();
         var s=0,t=0,u=0;
         for (const [key, value1] of Object.entries(val1)) {
+            console.log(key);
             if(key in val2){
                 var value2=val2[key];
                 if(parseInt(value1["rank"])==parseInt(value2["rank"])){
