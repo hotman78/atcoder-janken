@@ -27,31 +27,31 @@ function vs() {
     var ed=new Date();
     {
         switch($("#select1").val()){
-            case 0:
+            case "0":
                 st.setDate(st.getDate()-$("#start_time").val());
                 break;
-            case 1:
+            case "1":
                 st.setDate(st.getDate()-$("#start_time").val()*7);
                 break;
-            case 2:
+            case "2":
                 st.setMonth(st.getMonth()-$("#start_time").val());
                 break;
-            case 3:
+            case "3":
                 st.setFullYear(st.getFullYear()-$("#start_time").val());
                 break;
             default:
         }
         switch($("#select2").val()){
-            case 0:
+            case "0":
                 ed.setDate(ed.getDate()-$("#end_time").val());
                 break;
-            case 1:
+            case "1":
                 ed.setDate(ed.getDate()-$("#end_time").val()*7);
                 break;
-            case 2:
+            case "2":
                 ed.setMonth(ed.getMonth()-$("#end_time").val());
                 break;
-            case 3:
+            case "3":
                 ed.setFullYear(ed.getFullYear()-$("#end_time").val());
                 break;
             default:
