@@ -39,7 +39,7 @@ function make_table() {
             var value2=val2[key];
             if(parseInt(value1["rank"])==parseInt(value2["rank"])){
                 tblBody.append(`<tr><td>${value1["time"]}</td><td>${value1["name"]}</td><td bgcolor="#33FF99">${value1["rank"]}</td><td>${value2["rank"]}</td bgcolor="#33FF99"></tr>`);
-            }else if(parseInt(value)>parseInt(val2[key])){
+            }else if(parseInt(value1["rank"])>parseInt(value2["rank"])){
                 tblBody.append(`<tr><td>${value1["time"]}</td><td>${value1["name"]}</td><td>${value1["rank"]}</td><td bgcolor="#33FF99">${value2["rank"]}</td></tr>`);
             }else{
                 tblBody.append(`<tr><td>${value1["time"]}</td><td>${value1["name"]}</td><td bgcolor="#33FF99">${value1["rank"]}</td><td>${value2["rank"]}</td></tr>`);
