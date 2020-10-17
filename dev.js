@@ -14,7 +14,7 @@ function vs() {
     }
     {
         var url="https://asia-northeast1-atcoder-janken-api.cloudfunctions.net/api?id=";
-        p2=$("input#player1").val();
+        p2=$("input#player2").val();
         let xhr = new XMLHttpRequest();
         xhr.open('GET', url+p2,false);
         xhr.onload = () => {
