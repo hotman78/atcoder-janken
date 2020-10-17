@@ -23,8 +23,8 @@ function vs() {
         }
         xhr.send();
     }
-    var st=Date.now();
-    var ed=Date.now();
+    var st=new Date();
+    var ed=new Date();
     {
         switch($("#select1").val()){
             case 0:
