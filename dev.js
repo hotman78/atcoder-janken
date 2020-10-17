@@ -5,22 +5,24 @@ function vs() {
         var url="https://asia-northeast1-atcoder-janken-api.cloudfunctions.net/api?id=";
         p1=$("input#player1").val();
         let xhr = new XMLHttpRequest();
-        xhr.open('GET', url+p1);
+        xhr.open('GET', url+p1,false);
         xhr.onload = () => {
             let responseJson = JSON.parse(xhr.response);
             val1=responseJson;
         }
+        xhr.responseType = "json";
         xhr.send();
     }
     {
         var url="https://asia-northeast1-atcoder-janken-api.cloudfunctions.net/api?id=";
         p2=$("input#player1").val();
         let xhr = new XMLHttpRequest();
-        xhr.open('GET', url+p2);
+        xhr.open('GET', url+p2,false);
         xhr.onload = () => {
             let responseJson = JSON.parse(xhr.response);
             val2=responseJson;
         }
+        xhr.responseType = "json";
         xhr.send();
     }
     {
