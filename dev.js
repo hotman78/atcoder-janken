@@ -19,7 +19,7 @@ function vs() {
         xhr.open('GET', url+p2);
         xhr.onload = () => {
             let responseJson = JSON.parse(xhr.response);
-            val1=responseJson;
+            val2=responseJson;
         }
         xhr.send();
     }
