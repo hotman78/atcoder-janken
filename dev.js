@@ -23,11 +23,47 @@ function vs() {
         }
         xhr.send();
     }
+    var st=new Date();
+    var ed=new Date();
+    {
+        switch($("#select1").val()){
+            case 0:
+                st.setDate(st.getDate()-$("#start_time").val());
+                break;
+            case 1:
+                st.setDate(st.getDate()-$("#start_time").val()*7);
+                break;
+            case 2:
+                st.setMonth(st.getMonth()-$("#start_time").val());
+                break;
+            case 3:
+                st.setFullYear(st.getFullYear()-$("#start_time").val());
+                break;
+            default:
+        }
+        switch($("#select2").val()){
+            case 0:
+                ed.setDate(ed.getDate()-$("#end_time").val());
+                break;
+            case 1:
+                ed.setDate(ed.getDate()-$("#end_time").val()*7);
+                break;
+            case 2:
+                ed.setMonth(ed.getMonth()-$("#end_time").val());
+                break;
+            case 3:
+                ed.setFullYear(ed.getFullYear()-$("#end_time").val());
+                break;
+            default:
+        }
+    }
     {
         var tblBody = $("tbody");
         tblBody.empty();
         var s=0,t=0,u=0;
         for (const [key, value1] of Object.entries(val1)) {
+            var date=new Date(value1["time"].slice(0,10));
+            if(date<st||ed<date)continue;
             if(key in val2){
                 var value2=val2[key];
                 if(parseInt(value1["rank"])==parseInt(value2["rank"])){
@@ -41,9 +77,9 @@ function vs() {
         }
         tblBody.append(`<tr><td colspan="4" align="center"><strong>${s<t?`${t}勝${s}負${u}引き分けで${p2}の勝利です！！`:`${s}勝${t}負${u}引き分けで${p1}の勝利です！！`}</strong><a href="https://twitter.com/share" class="twitter-share-button" data-text="【AtCoderじゃんけん】\n${p1} vs ${p2}\n${s}対${t}で${s==t?"引き分けです！！":(s<t?`${p2}の勝利です！！`:`${p1}の勝利です！！`)}\n#Atcoderじゃんけん" data-url="https://hotman78.github.io/atcoder-janken/" data-related="hotmanww">Tweet</a></td></tr>`);
         tblBody.append(`<tr><td>日時</td><td>コンテスト名</td><td>順位(${p1})</td><td>順位(${p2})</td></tr>`)
-        var st=new Date();
-        var ed=new Date();
         for (const [key, value1] of Object.entries(val1)) {
+            var date=new Date(value1["time"].slice(0,10));
+            if(date<st||ed<date)continue;
             if(key in val2){
                 var value2=val2[key];
                 if(parseInt(value1["rank"])==parseInt(value2["rank"])){
