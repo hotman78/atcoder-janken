@@ -10,7 +10,6 @@ function vs() {
             let responseJson = JSON.parse(xhr.response);
             val1=responseJson;
         }
-        xhr.responseType = "json";
         xhr.send();
     }
     {
@@ -22,7 +21,6 @@ function vs() {
             let responseJson = JSON.parse(xhr.response);
             val2=responseJson;
         }
-        xhr.responseType = "json";
         xhr.send();
     }
     {
