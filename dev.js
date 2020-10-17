@@ -1,6 +1,6 @@
-var val1={},val2={};
-var p1="",p2="";
 function vs() {
+    var val1={},val2={};
+    var p1="",p2="";
     {
         var url="https://asia-northeast1-atcoder-janken-api.cloudfunctions.net/api?id=";
         p1=$("input#player1").val();
@@ -28,7 +28,6 @@ function vs() {
         tblBody.empty();
         var s=0,t=0,u=0;
         for (const [key, value1] of Object.entries(val1)) {
-            console.log(key);
             if(key in val2){
                 var value2=val2[key];
                 if(parseInt(value1["rank"])==parseInt(value2["rank"])){
@@ -42,8 +41,9 @@ function vs() {
         }
         tblBody.append(`<tr><td colspan="4" align="center"><strong>${s<t?`${t}勝${s}負${u}引き分けで${p2}の勝利です！！`:`${s}勝${t}負${u}引き分けで${p1}の勝利です！！`}</strong><a href="https://twitter.com/share" class="twitter-share-button" data-text="【AtCoderじゃんけん】\n${p1} vs ${p2}\n${s}対${t}で${s==t?"引き分けです！！":(s<t?`${p2}の勝利です！！`:`${p1}の勝利です！！`)}\n#Atcoderじゃんけん" data-url="https://hotman78.github.io/atcoder-janken/" data-related="hotmanww">Tweet</a></td></tr>`);
         tblBody.append(`<tr><td>日時</td><td>コンテスト名</td><td>順位(${p1})</td><td>順位(${p2})</td></tr>`)
+        var st=new Date();
+        var ed=new Date();
         for (const [key, value1] of Object.entries(val1)) {
-            console.log(key);
             if(key in val2){
                 var value2=val2[key];
                 if(parseInt(value1["rank"])==parseInt(value2["rank"])){
