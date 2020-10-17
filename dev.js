@@ -20,11 +20,12 @@ function make_table() {
     var tblBody = $("tbody");
     tblBody.empty();
     var s=0,t=0,u=0;
-    for (const [key, value] of Object.entries(val1)) {
+    for (const [key, value1] of Object.entries(val1)) {
         if(key in val2){
-            if(parseInt(value)==parseInt(val2[key])){
+            var value2=val2[key];
+            if(parseInt(value1["rank"])==parseInt(value2["rank"])){
                 u++;
-            }else if(parseInt(value)>parseInt(val2[key])){
+            }else if(parseInt(value1["rank"])>parseInt(value2["rank"])){
                 t++;
             }else{
                 s++;
