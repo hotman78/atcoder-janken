@@ -1,6 +1,6 @@
+var val1={},val2={};
+var p1="",p2="";
 function vs() {
-    var val1={},val2={};
-    var p1="",p2="";
     {
         var url="https://asia-northeast1-atcoder-janken-api.cloudfunctions.net/api?id=";
         p1=$("input#player1").val();
