@@ -26,6 +26,7 @@ function vs() {
     var st=new Date();
     var ed=new Date();
     {
+        console.log($("#select1").val());
         switch($("#select1").val()){
             case "0":
                 st.setDate(st.getDate()-$("#start_time").val());
