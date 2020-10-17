@@ -63,7 +63,9 @@ function vs() {
         var s=0,t=0,u=0;
         for (const [key, value1] of Object.entries(val1)) {
             var date=new Date(value1["time"].slice(0,10));
+            console.log(st.toUTCString());
             console.log(date.toUTCString());
+            console.log(ed.toUTCString());
             if(date<st||ed<date)continue;
             if(key in val2){
                 var value2=val2[key];
